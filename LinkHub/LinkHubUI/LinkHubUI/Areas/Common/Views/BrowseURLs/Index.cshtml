@@ -57,7 +57,7 @@
     double TotalPage = @ViewBag.TotalPages;
 }
 <ul class="pagination">
-    @for (int i = 1; i <= TotalPage; i++)
+    @for (double i = 1; i <= TotalPage; i++)
     {
         if (i == ViewBag.Page)
         {
