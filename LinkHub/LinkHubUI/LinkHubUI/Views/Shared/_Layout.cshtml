@@ -21,6 +21,15 @@
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", new { Controller = "Home", Area = "Common"}) </li>
+                    <li>@Html.ActionLink("Category", "Index", new { Controller = "Category", Area = "Admin" })</li>
+                    <li>@Html.ActionLink("List Category", "Index", new { Controller = "ListCategory", Area = "Admin" })</li>
+                    <li>@Html.ActionLink("Register", "Index", new { Controller = "Register", Area = "Security" })</li>
+                    <li>@Html.ActionLink("Login", "Index", new { Controller = "Login", Area = "Security" })</li>
+                    <li>@Html.ActionLink("Submit URL", "Index", new { Controller = "URL", Area = "User" })</li>
+                    <li>@Html.ActionLink("Approve URLs", "Index", new { Controller = "ApproveURLs", Area = "Admin" })</li>
+                    <li>@Html.ActionLink("Browse URLs", "Index", new { Controller = "BrowseURLs", Area = "Common" })</li>
+                    <li>@Html.ActionLink("List User", "Index", new { Controller = "ListUser", Area = "Admin" })</li>
                 </ul>
             </div>
         </div>

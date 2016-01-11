@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace LinkHubUI.Areas.Common.Controllers
 {
-    public class BrowseURLController : Controller
+    public class BrowseURLsController : Controller
     {
         // GET: Common/BrowseURL
         public ActionResult Index()
