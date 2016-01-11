@@ -16,5 +16,14 @@ namespace LinkHubUI.Controllers
             ViewBag.CategoryId = new SelectList(db.tbl_Category, "CategoryId", "CategoryName");
             return View();
         }
+
+        //POST:
+        [HttpPost]
+        public ActionResult CreateURL(tbl_Url objUrl)
+        {
+            LinkHubDbEntities db = new LinkHubDbEntities();
+            ViewBag.CategoryId = new SelectList(db.tbl_Category, "CategoryId", "CategoryName");
+            return View();
+        }
     }
 }
