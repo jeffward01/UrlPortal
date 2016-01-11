@@ -21,8 +21,8 @@ namespace LinkHubUI.Areas.Common.Controllers
         // GET: Common/BrowseURL
         public ActionResult Index()
         {
-
-            var urls = objBs.GetAll();
+            //Only Grab Approved URL's and make links clickable
+            var urls = objBs.GetAll().Where(url => url.IsApproved == "A").ToList();
             return View(urls);
         }
     }

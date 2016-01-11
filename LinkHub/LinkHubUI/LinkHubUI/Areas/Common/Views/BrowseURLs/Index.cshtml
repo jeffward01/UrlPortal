@@ -12,7 +12,7 @@
             @Html.DisplayNameFor(model => model.UrlTitle)
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.Url)
+             @Html.DisplayNameFor(model => model.Url)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.UrlDesc)
@@ -30,7 +30,8 @@
             @Html.DisplayFor(modelItem => item.UrlTitle)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.Url)
+            <a target="_blank" href=@item.Url>@item.Url</a>
+          
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.UrlDesc)
