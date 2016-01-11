@@ -3,3 +3,7 @@ C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\DAL\bin\Debug\DAL.pdb
 C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\DAL\obj\Debug\DAL.csprojResolveAssemblyReference.cache
 C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\DAL\obj\Debug\DAL.dll
 C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\DAL\obj\Debug\DAL.pdb
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\DAL\bin\Debug\BOL.dll
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\DAL\bin\Debug\EntityFramework.dll
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\DAL\bin\Debug\BOL.pdb
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\DAL\bin\Debug\EntityFramework.xml
