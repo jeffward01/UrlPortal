@@ -1,0 +1,5 @@
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\BLL\bin\Debug\BLL.dll
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\BLL\bin\Debug\BLL.pdb
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\BLL\obj\Debug\BLL.csprojResolveAssemblyReference.cache
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\BLL\obj\Debug\BLL.dll
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\BLL\obj\Debug\BLL.pdb
