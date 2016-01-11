@@ -85,6 +85,8 @@ namespace LinkHubUI.Areas.Common.Controllers
 
             }
 
+
+            //Page Code
             ViewBag.TotalPages = Math.Ceiling(objBs.GetAll().Where(x => x.IsApproved == "A").Count() / 10.0);
             int page = int.Parse(Page == null ? "1" : Page);
             ViewBag.Page = page;
