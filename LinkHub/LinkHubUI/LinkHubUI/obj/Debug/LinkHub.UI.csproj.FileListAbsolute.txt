@@ -37,3 +37,5 @@ C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\LinkHubUI\bin\EntityFramew
 C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\LinkHubUI\bin\BLL.pdb
 C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\LinkHubUI\bin\BOL.pdb
 C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\LinkHubUI\bin\EntityFramework.xml
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\LinkHubUI\bin\EntityFramework.SqlServer.dll
+C:\Dev\udemy\3 Tier Web Application\LinkHub\LinkHubUI\LinkHubUI\bin\EntityFramework.SqlServer.xml
