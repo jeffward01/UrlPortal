@@ -19,10 +19,78 @@ namespace LinkHubUI.Areas.Common.Controllers
 
 
         // GET: Common/BrowseURL
-        public ActionResult Index()
+        public ActionResult Index(string SortOrder, string SortBy, string Page)
         {
-            //Only Grab Approved URL's and make links clickable
-            var urls = objBs.GetAll().Where(url => url.IsApproved == "A").ToList();
+            ViewBag.SortOrder = SortOrder;
+            ViewBag.SortBy = SortBy;
+            var urls = objBs.GetAll().Where(x => x.IsApproved == "A");
+            switch (SortBy)
+            {
+                case "Title":
+                    switch (SortOrder)
+                    {
+                        case "Asc":
+                            urls = urls.OrderBy(x => x.UrlTitle).ToList();
+                            break;
+                        case "Desc":
+                            urls = urls.OrderByDescending(x => x.UrlTitle).ToList();
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case "Url":
+                    switch (SortOrder)
+                    {
+                        case "Asc":
+                            urls = urls.OrderBy(x => x.Url).ToList();
+                            break;
+                        case "Desc":
+                            urls = urls.OrderByDescending(x => x.Url).ToList();
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case "UrlDesc":
+                    switch (SortOrder)
+                    {
+                        case "Asc":
+                            urls = urls.OrderBy(x => x.UrlDesc).ToList();
+                            break;
+                        case "Desc":
+                            urls = urls.OrderByDescending(x => x.UrlDesc).ToList();
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+                case "Category":
+                    switch (SortOrder)
+                    {
+                        case "Asc":
+                            urls = urls.OrderBy(x => x.tbl_Category.CategoryName).ToList();
+                            break;
+                        case "Desc":
+                            urls = urls.OrderByDescending(x => x.tbl_Category.CategoryName).ToList();
+                            break;
+                        default:
+                            break;
+                    }
+                    break;
+
+                default:
+                    urls = urls.OrderBy(x => x.UrlTitle).ToList();
+                    break;
+
+            }
+
+            ViewBag.TotalPages = Math.Ceiling(objBs.GetAll().Where(x => x.IsApproved == "A").Count() / 10.0);
+            int page = int.Parse(Page == null ? "1" : Page);
+            ViewBag.Page = page;
+
+            urls = urls.Skip((page - 1) * 10).Take(10);
+
             return View(urls);
         }
     }

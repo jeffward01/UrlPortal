@@ -9,16 +9,18 @@
 <table class="table">
     <tr>
         <th>
-            @Html.DisplayNameFor(model => model.UrlTitle)
+           @Html.ActionLink("UrlTitle", "Index", new { SortOrder = (ViewBag.SortOrder == null? "Asc" :(ViewBag.SortOrder == "Asc"? "Desc": "Asc") ) , SortBy = "Title" })
+
         </th>
         <th>
-             @Html.DisplayNameFor(model => model.Url)
+            @Html.ActionLink("URL", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "Url" })
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.UrlDesc)
+            @Html.ActionLink("URL Desc", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "UrlDesc" })
+
         </th>
         <th>
-            @Html.DisplayNameFor(model => model.tbl_Category.CategoryName)
+            @Html.ActionLink("Category", "Index", new { SortOrder = (ViewBag.SortOrder == null ? "Asc" : (ViewBag.SortOrder == "Asc" ? "Desc" : "Asc")), SortBy = "Category" })
         </th>
       
         <th></th>
