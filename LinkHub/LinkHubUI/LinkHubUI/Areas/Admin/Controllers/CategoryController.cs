@@ -12,6 +12,13 @@ namespace LinkHubUI.Areas.Admin.Controllers
     public class CategoryController : BaseAdminController
     {
 
+        private CategoryBs objBs;
+        public CategoryController()
+        {
+            objBs = new CategoryBs();
+        }
+
+        //GET: /Admin/Category
         public ActionResult Index()
         {
             return View();
@@ -20,20 +27,26 @@ namespace LinkHubUI.Areas.Admin.Controllers
         [HttpPost]
         public ActionResult Create(tbl_Category model)
         {
-            if (!ModelState.IsValid)
-                return View("Index");
-
             try
             {
-                objBs.categoryBs.Insert(model);
-                TempData["Msg"] = "Created Successfully";
+
+                if (!ModelState.IsValid)
+                {
+                    objBs.Insert(model);
+                    TempData["Msg"] = "Created Successfully";
+                    return RedirectToAction("Index");
+                }
+                else
+                {
+                    return View("Index");
+                }
             }
             catch (Exception exception)
             {
                 TempData["Msg"] = "Create Failed : " + exception.Message;
-            }
+                return RedirectToAction("Index");
 
-            return RedirectToAction("Index");
+            }
         }
     }
 }
